@@ -24,3 +24,7 @@ git config --global user.nombre  "nferrucho"
 
 git status
 -- nos permite ver si hay una modificaion para realizar de nuevo commit
+
+Para agregar el cambio =>
+git add <nombreArchivo> 
+git commit -m "texto"
