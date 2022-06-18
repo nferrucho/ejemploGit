@@ -1,9 +1,26 @@
-Git
+Git HUB
 --------
 git init 
 - inicializa git en la carpeta para trabajar con ella
+
 git status
 - permite ver como esta el repositorio en git, ve los contenidos seleccionados
 - untraced es que no los ha monitorieado para cargarlos
 - no tiene commits o cambios deversiones
 - no branch es decir sin ramas de cambios
+
+git add .
+- agrega todos los archivos a git
+- comienza a hacer el monitoreo
+
+git commit -m "comentario"
+- hace comit en git de los archivos
+
+git config --global user.email "nelson.ferrucho@gmail.com"
+-- asigna confirguracion de git a email
+
+git config --global user.nombre  "nferrucho"
+-- asigna nombre a git
+
+git status
+-- nos permite ver si hay una modificaion para realizar de nuevo commit
