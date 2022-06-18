@@ -1,0 +1,9 @@
+Git
+--------
+git init 
+- inicializa git en la carpeta para trabajar con ella
+git status
+- permite ver como esta el repositorio en git, ve los contenidos seleccionados
+- untraced es que no los ha monitorieado para cargarlos
+- no tiene commits o cambios deversiones
+- no branch es decir sin ramas de cambios
