@@ -1,30 +1,88 @@
 Git HUB
---------
+==============
 git init 
-- inicializa git en la carpeta para trabajar con ella
+# inicializa git en la carpeta para trabajar con ella
 
 git status
-- permite ver como esta el repositorio en git, ve los contenidos seleccionados
-- untraced es que no los ha monitorieado para cargarlos
-- no tiene commits o cambios deversiones
-- no branch es decir sin ramas de cambios
+# permite ver como esta el repositorio en git, ve los contenidos seleccionados
+# untraced es que no los ha monitorieado para cargarlos
+# no tiene commits o cambios deversiones
+# no branch es decir sin ramas de cambios
 
 git add .
-- agrega todos los archivos a git
-- comienza a hacer el monitoreo
+# agrega todos los archivos a git
+# comienza a hacer el monitoreo
 
 git commit -m "comentario"
-- hace comit en git de los archivos
+# hace comit en git de los archivos
 
 git config --global user.email "nelson.ferrucho@gmail.com"
--- asigna confirguracion de git a email
+## asigna confirguracion de git a email
 
-git config --global user.nombre  "nferrucho"
--- asigna nombre a git
+git config --global user.name  "nferrucho"
+## asigna nombre a git
+
+git config --local
+# cambios a nivel local o de la carpeta 
 
 git status
--- nos permite ver si hay una modificaion para realizar de nuevo commit
+## nos permite ver si hay una modificaion para realizar de nuevo commit
 
 Para agregar el cambio =>
 git add <nombreArchivo> 
 git commit -m "texto"
+
+git diff
+# muestra la diferencia entre lo diponible en git y lo disponible en la carpeta local
+
+git diff --staged
+# compara contra la ultima instancia
+
+git rm 
+# elimina archivos 
+
+git rm --cached README
+# elimina archivo de git pero lo deja en la carpeta
+
+cat .gitignore
+# arma un archivo que va a contener archivos a ignorar de la carpeta
+# las carpetas van carpeta/
+# los archivos se indican los archivos a excluuir
+
+# ignora los archivos terminados en .a
+*.a
+
+# pero no lib.a, aun cuando había ignorado los archivos terminados en .a en la línea anterior
+!lib.a
+
+# ignora unicamente el archivo TODO de la raiz, no subdir/TODO
+/TODO
+
+# ignora todos los archivos del directorio build/
+build/
+
+# ignora doc/notes.txt, pero no este: doc/server/arch.txt
+doc/*.txt
+
+# ignora todos los archivos .txt del directorio doc/
+doc/**/*.txt
+
+git rm log/\*.log
+# borra de la carpeta y del directorio log/ todos los archivos .log
+
+ 
+git mv file_from file_to
+# renombre de archivos
+
+
+git log
+# historico de actividades
+
+git log -p
+# informacion en arbol de los cambios realizados
+# salimos con :q
+
+git log --pretty="format:%h %s"
+# presentacion corta de log
+
+#ejemplo de git log  => https://devhints.io/git-log
