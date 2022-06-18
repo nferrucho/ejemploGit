@@ -45,9 +45,9 @@ git rm --cached README
 # elimina archivo de git pero lo deja en la carpeta
 
 cat .gitignore
-# arma un archivo que va a contener archivos a ignorar de la carpeta
-# las carpetas van carpeta/
-# los archivos se indican los archivos a excluuir
+# arma un archivo  .gitignore que va a contener archivos y carpetas a ignorar
+# las carpetas van asi carpeta/
+# los archivos se indican los archivos a excluir
 
 # ignora los archivos terminados en .a
 *.a
@@ -84,5 +84,42 @@ git log -p
 
 git log --pretty="format:%h %s"
 # presentacion corta de log
+# ejemplo de git log  => https://devhints.io/git-log
 
-#ejemplo de git log  => https://devhints.io/git-log
+git stash save "mensaje opcional para ti" 
+# guarda cambios en un temporal sin subirlos a repositorio
+
+git stash list
+# lsita los cambios guardados en stash
+
+git stash drop NOMBRE-DEL-STASH
+# borra los cambios del stash
+
+git stash clear
+# limpia el stash
+
+
+git init -bare
+# en una carpeta servidor se hace git init para pasar los archivos a cargar al servidor
+# aqui estan la modificaciones que son puras y que van para el servidor
+# genera una ruta donde estara alojado el servidor
+# esta direccion se señala DENTRO de la carpeta donde estan nuestos cambios locales para referenciarlo
+
+git remote add servidorlocal DIRECCION-SERVIDOR
+# dentro de la carpeta de trabajo señalamos donde esta el servidor local
+# apunta al servidor local la carpeta de trabajo
+# DIRECCION SERVIDOR, puede ser una URL o un servidor direccion remoto
+
+git remote
+# indica que existe un servidor local
+
+git remote -v
+# lista la direccion del servidor 
+
+git clone DIRECION-SERVIDOR nombreProyecto
+# dentro de la carpera local creada 
+# clona la informacion de un servidor creado
+
+
+
+ 
