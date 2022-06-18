@@ -121,5 +121,16 @@ git clone DIRECION-SERVIDOR nombreProyecto
 # clona la informacion de un servidor creado
 
 
-
+git push servidorlocal master
+# desde la carpeta local EMPUJA datos al servidorlocal
+# crea una nueva rama con los datos enviados
  
+git remote
+# desde la carpeta de otro usuario y DENTRO de la carpeta PROYECTO que se indico cuando realizo clone
+# indica que hay un servidor
+
+git remote rename origin servidorlocal
+# asigna el nombre de origin a local para poder tomar los datos que otros parces han agregado
+
+git pull servidorlocal master
+# HALA los datos del servidorlocal dispuestos en la rama master a la carpeta 
